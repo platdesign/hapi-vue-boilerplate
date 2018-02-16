@@ -1,0 +1,33 @@
+doctype html
+html
+  head
+    title App
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+
+    //- manifest
+    //-link(rel="manifest" href="/manifest.json")
+
+    //- ios homescreen-button
+    meta(name="apple-mobile-web-app-capable", content="yes")
+    meta(name="apple-mobile-web-app-status-bar-style", content="default")
+
+    //- disable possible phone numbers in this page on ios
+    meta(name="format-detection", content="telephone=no")
+
+    //- icons
+    //-link(rel="icon" sizes="217x217" href="/assets/gfx/rhombus-icon.png")
+    //-link(rel="icon" sizes="217x217" href="/assets/gfx/rhombus-icon.png")
+    //-link(rel="apple-touch-icon" sizes="217x217" href="/assets/gfx/rhombus-icon.png")
+    //-link(rel="apple-touch-icon-precomposed" sizes="217x217" href="/assets/gfx/rhombus-icon.png")
+
+
+
+    script window.APPDATA = !{JSON.stringify(APPDATA || {})};
+
+
+  body
+    #app
+    if env !== 'production'
+      script(src="/assets/js/app.js")
